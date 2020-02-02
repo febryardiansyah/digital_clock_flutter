@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:slide_digital_clock/slide_digital_clock.dart';
+import 'package:analog_clock/analog_clock.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,13 +11,38 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.grey.shade300,
-        appBar: AppBar(
-          title: Text('Digital Clock'),
-        ),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              AnalogClock(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(174),
+                  color: Colors.grey.shade300,
+                  boxShadow: [
+                    BoxShadow(
+                      offset: Offset(16,16),
+                      color: Colors.black38,
+                      blurRadius: 37
+                    ),
+                    BoxShadow(
+                      offset: Offset(-16,-16),
+                      color: Colors.white.withOpacity(0.85),
+                      blurRadius: 37
+                    )
+                  ]
+                ),
+                width: 300,
+                height: 300,
+                isLive: true,
+                hourHandColor: Colors.grey,
+                minuteHandColor: Colors.blue,
+                showSecondHand: false,
+                numberColor: Colors.black38,
+                showDigitalClock: false,
+                textScaleFactor: 2,
+              ),
+              SizedBox(height: 35,),
               DigitalClock(
                 areaAligment: AlignmentDirectional.center,
                 areaHeight: 130,
