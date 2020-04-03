@@ -25,6 +25,9 @@ dependencies:
   cupertino_icons: ^0.1.2
   slide_digital_clock: ^1.0.0
   analog_clock: ^0.0.1
+  intl: ^0.16.1
+  simple_animations: ^1.3.11
+  animated_text_kit: ^2.0.0
 
 dev_dependencies:
   flutter_test:
@@ -36,6 +39,10 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
+  fonts:
+    - family: Horizon
+      fonts:
+        - asset: fonts/horizon.regular.otf
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
